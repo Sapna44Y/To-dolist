@@ -1,0 +1,216 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.task-input {
+  margin: 20px;
+}
+
+.todo-table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.todo-table th,
+.todo-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.heading {
+  font-family: "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff5f5f, #fe7bd2); /* Gradient effect */
+  color: transparent;
+  background-clip: text; /* Clipping the background to text */
+  padding: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 20px;
+  /* Adding text shadow */
+  text-shadow: 4px 4px 11px rgba(0, 0, 0, 0.231),
+    -3px -3px 3px rgba(0, 0, 0, 0.347);
+
+  position: relative;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #6b11cb46, 0 0 10px #6b11cb34, 0 0 15px #6b11cb47;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff7f5f50, 0 0 30px #feb47b3a, 0 0 40px #6b11cb4b;
+  }
+}
+.heading:hover {
+  animation: bounce 0.5s ease-out;
+  color: #b825fc8a;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 5px;
+  background: #fe7b7beb;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 650px;
+}
+
+.task-input input {
+  padding: 12px 15px;
+  font-size: 18px;
+  width: 72%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-input input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.task-input button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-input button:hover {
+  background-color: #848b1a;
+  transform: translateY(-2px);
+}
+
+.task-input button:active {
+  transform: translateY(2px);
+}
+
+/* Table Styling */
+.todo-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+
+  background-color: #e1dfdd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  border: 2px solid #858586;
+}
+
+.todo-table th {
+  background-color: #4e6e81;
+  color: white;
+}
+
+.todo-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.todo-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles for Actions */
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Edit Button */
+button:focus {
+  outline: none;
+}
+
+button:nth-of-type(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #1d7e32;
+}
+
+button:nth-of-type(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+button:nth-of-type(2):hover {
+  background-color: #9f1724;
+}
+
+/* Edit input field */
+.iteminput {
+  padding: 8px;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid #f0b28bf1;
+  font-size: 16px;
+}
+
+.iteminput:focus {
+  border-color: #00f7ff;
+}
